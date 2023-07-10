@@ -1,18 +1,38 @@
 
 #ifndef FRACTOL_H
-
 # define FRACTOL_H
 
-# define WIDTH		1000
-# define HEIGHT		1000
-
-# define THREADS	10
-
+# include "mlx.h"
 # include "libft.h"
+# include <stdio.h>
 # include <math.h>
-# include <mlx.h>
-# include <stdint.h>
 
-// Color
-// channel - alpha, red, green, blue color channels
- 
+/* Dimensions */
+# define WIDTH 1000 
+# define HEIGHT 1000
+# define MAX_ITERATIONS 60
+
+/* Fractal sets */
+
+typedef struct s_fractol
+{
+	void	*mlx;
+	void	*win;
+	void	*img;
+	char	*buf;
+	int		set;
+	double	min_r;
+	double	max_r;
+	double	min_i;
+	double	max_i;
+	double	kr;
+	double	ki;
+	double	sx;
+	double	rx;
+	double	fx;
+	int		*palette;
+	int		color_pattern;
+	int		color;
+}	t_fractol;
+
+#endif
