@@ -13,6 +13,11 @@
 # define MAX_ITERATIONS 60
 
 /* Fractal sets */
+# define MANDELBROT 1
+# define JULIA 2
+# define BURNING_SHIP 3
+# define TRICORN 4
+# define MANDELBOX 5
 
 typedef struct s_fractol
 {
